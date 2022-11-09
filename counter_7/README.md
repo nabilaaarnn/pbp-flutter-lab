@@ -8,6 +8,8 @@
 **Stateless widget**
 
 Widget statis dimana seluruh konfigurasi yang dimuat didalamnya telah diinisiasi sejak awal. 
+Propertinya ditentukan oleh parent-nya dan bersifat final. Saat di-instansiasi untuk pertama kalinya, properti 
+tidak akan berubah kecuali parent-nya mengalami perubahan. Contohnya adalah root aplikasi.
 
 **Stateful widget**
 
@@ -39,7 +41,8 @@ dan pengurangan angka saat decrement.
 **Const**
 
 Variabel Const digunakan untuk deklarasi variabel immutable yang nilainya bersifat konstan dan harus sudah diketahui 
-pada saat waktu kompilasi (Compile time) berjalan, artinya adalah nilai dari variabel tersebut harus sudah di berikan value secara langsung.
+pada saat waktu kompilasi (Compile time) berjalan, artinya adalah nilai dari variabel tersebut harus sudah di berikan 
+value secara langsung.
 
 **Final**
 
