@@ -49,7 +49,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String simpanGanjilGenap = "Genap";
+  String simpanGanjilGenap = "GENAP";
 
   void _decrementCounter() {
     setState(() {
@@ -60,9 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter--;
               if (_counter % 2 == 0) {
-                simpanGanjilGenap = "Genap";
+                simpanGanjilGenap = "GENAP";
               } else {
-                simpanGanjilGenap = "Ganjil";
+                simpanGanjilGenap = "GANJIL";
               }
     });
   }
@@ -76,9 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
               if (_counter % 2 == 0) {
-                simpanGanjilGenap = "Genap";
+                simpanGanjilGenap = "GENAP";
               } else {
-                simpanGanjilGenap = "Ganjil";
+                simpanGanjilGenap = "GANJIL";
               }
     });
   }
@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               simpanGanjilGenap, //ini untuk menampilkan hasil ganjil genap
-              style: (simpanGanjilGenap == "Genap") ? TextStyle(color: Colors.red) : TextStyle(color: Colors.blue),
+              style: (simpanGanjilGenap == "GENAP") ? TextStyle(color: Colors.red) : TextStyle(color: Colors.blue),
             ),
             Text(
               '$_counter',
