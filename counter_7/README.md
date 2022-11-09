@@ -6,9 +6,11 @@
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 
 **Stateless widget**
+
 Widget statis dimana seluruh konfigurasi yang dimuat didalamnya telah diinisiasi sejak awal. 
 
 **Stateful widget**
+
 Widget yang dapat berubah-ubah secara dinamis, sehingga widget ini dapat diperbaharui 
 kapanpun dibutuhkan berdasarkan user actions atau ketika terjadinya perubahan data. 
 Statefull widget tugas ini yaitu pada button increment di klik, maka text akan berubah.
@@ -33,11 +35,14 @@ dan _incrementCounter() akan berdampak pada variabel _counter yang akan melakuka
 dan pengurangan angka saat decrement. 
 
 ## Jelaskan perbedaan antara const dengan final.
+
 **Const**
+
 Variabel Const digunakan untuk deklarasi variabel immutable yang nilainya bersifat konstan dan harus sudah diketahui 
 pada saat waktu kompilasi (Compile time) berjalan, artinya adalah nilai dari variabel tersebut harus sudah di berikan value secara langsung.
 
 **Final**
+
 Variabel yang menggunakan keyword final diinialisasi pada saat pertama kali digunakan dan hanya disetel sekali. 
 Nilai final akan diketahui pada saat run-time. Programmer tidak diwajibkan untuk melakukan pemberian value
 secara eksplisit ketika kompilasi variabel dijalankan, sehingga dapat dikompilasi walaupun valuenya belum diketahui.
