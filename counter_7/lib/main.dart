@@ -1,5 +1,5 @@
-import 'package:counter_7/form.dart';
 import 'package:flutter/material.dart';
+import 'package:counter_7/form.dart';
 import 'package:counter_7/show.dart';
 
 
@@ -64,11 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      // Menambahkan drawer menu
+      // Drawer menu
       drawer: Drawer(
         child: Column(
           children: [
-            // Menambahkan clickable menu
+            // Clickable menu
             ListTile(
               title: const Text('Counter'),
               onTap: () {
