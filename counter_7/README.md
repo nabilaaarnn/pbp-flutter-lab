@@ -1,3 +1,60 @@
+  # Tugas 8 PBP
+ - Nama   : Rizka Nisrina Nabila
+ - NPM    : 2106653344
+ - Kelas  : PBP - B
+ 
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Navigator.push() menumpuk route teratas sebelumnya dengan widget baru. Navigator.pushReplacement() 
+mengganti route teratas sebelumnya dengan widget baru. Penggunaan push pada navigator tidak menghapus widget 
+sebelumnya, tetapi hanya ditumpuk dengan widget baru, sedangkan pushReplacement menggantikan widget sebelumnya 
+dengan widget baru.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Container, berfungsi untuk membungkus suatu widget dan memberikan pading serta pading
+- Column, semua widget yang ada didalam widget ini akan ditampilkan secara vertical
+- Scaffold, sebagai landasan halaman
+- AppBar, biasanya menjadi judul (dari sebuah aplikasi atau halaman)
+- Row, semua widget yang ada didalam widget ini akan ditampilkan secara horizontal
+- Icon, memberikan ikon pada sebuah widget
+- Padding, berufngsi untuk memebrikan jarak pada widget
+- Text, menampilkan teks dan memberikan style pada tekst tersebut
+- DropdownButton, material design button untuk menampung list of item
+- dll
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onPressed
+- onHover
+- onLongPress
+- onSaved
+- onChange
+- onFocusChange
+- onTap
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Widget navigator merupakan manager yang mengatur perpindahan screen. Navigasi di Flutter 
+menggunakan struktur Stack karena konsepnya mirip dengan behavior screen. Widget navigator 
+mempunyai method push dan pop. Method push menambahkan sebuah screen baru ke bagian paling 
+atas stack, sedangkah pop akan menghilangkan screen dari stack navigasi.
+
+Jadi, cara kerjanya yaitu misal untuk tugas ini ada halaman Tambah Budget dan Data Budget. 
+Jika kita sedang berada di screen Tambah Budget dan ingin melihat data di Data Budget, 
+ketika kita klik Data Budget di navigasi, maka screen Data Budget akan di-push ke dalam stack, 
+jika kita ingin kembali ke screen Tambah Budget, maka screen Data Budget akan di-pop dari stack.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat drawer yang berisi navigator agar user bisa berpindah-pindah screen 
+melalui navigator tersebut. 
+- Membuat dua file baru, yaitu form.dart dan show.dart.
+- Menambahkan widget Form yang berisi key untuk identifikasi form ada form.dart, serta 
+memungkinkan validasi untuk form. Isinya yaitu input untuk judul, nominal, dan jenis budget. 
+Untuk setiap input, diatur padding-nya. Saya juga menambahkan behavior untuk saat ketika nama 
+diketik dan saat data disimpan, serta validator. 
+- Pada show.dart, saya mengimport list dari form.dart untuk ditampilkan pada screen Data Budget. 
+- Lalu, looping pada children dari Column untuk menampilkan setiap datanya. Setiap 
+looping, data-data akan ditaruh pada sebuah Card. Lebih spesifiknya, pada widget Text yang 
+sebelumnya telah diatur pada widget Align.
+
+
   # Tugas 7 PBP
  - Nama   : Rizka Nisrina Nabila
  - NPM    : 2106653344
@@ -47,3 +104,4 @@ secara eksplisit ketika kompilasi variabel dijalankan, sehingga dapat dikompilas
 - Membuat Text Widget Genap dan Ganjil, dan melakukan styling warna
 - Membuat fungsi decrementCounter()
 - Membuat Widget FloatingActionButton baru dibagian bawah kiri dan mengimplementasikan fungsi decrementCounter
+
