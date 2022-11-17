@@ -12,10 +12,10 @@ class MyDataPage extends StatefulWidget {
 
 class Data {
   String? judullengkap; 
-  String? nominallengkap;
+  int? nominallengkap;
   String? pilihan;
   
-  Data(String judullengkap, String nominallengkap, String pilihan) {
+  Data(String judullengkap, int nominallengkap, String pilihan) {
     this.judullengkap = judullengkap;
     this.nominallengkap = nominallengkap;
     this.pilihan = pilihan;

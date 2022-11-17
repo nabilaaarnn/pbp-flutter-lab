@@ -14,7 +14,7 @@ class MyFormPage extends StatefulWidget {
 class _MyFormPageState extends State<MyFormPage> {
     final _formKey = GlobalKey<FormState>();
     String? _judullengkap;
-    String? _nominallengkap;
+    int? _nominallengkap;
     String? _pilihan;
     List<String> list_pilihan = ['Pengeluaran', 'Pemasukan'];
 
@@ -114,13 +114,13 @@ class _MyFormPageState extends State<MyFormPage> {
                                     // Menambahkan behavior saat nama diketik 
                                     onChanged: (String? value) {
                                         setState(() {
-                                            _nominallengkap = value!;
+                                            _nominallengkap = int.parse(value!);
                                         });
                                     },
                                     // Menambahkan behavior saat data disimpan
                                     onSaved: (String? value) {
                                         setState(() {
-                                            _nominallengkap = value!;
+                                            _nominallengkap = int.parse(value!);
                                         });
                                     },
                                     // Validator sebagai validasi form
@@ -159,10 +159,10 @@ class _MyFormPageState extends State<MyFormPage> {
                                 onPressed: () {
                                     if (_formKey.currentState!.validate()) {
                                         if (_pilihan == "Pemasukan") {
-                                            Data data = Data(_pilihan.toString(), _nominallengkap.toString(), _judullengkap.toString());
+                                            Data data = Data(_pilihan.toString(),_nominallengkap!, _judullengkap.toString());
                                             listData.add(data);
                                         } else if (_pilihan == "Pengeluaran") {
-                                            Data data = Data(_pilihan.toString(), _nominallengkap.toString(), _judullengkap.toString());
+                                            Data data = Data(_pilihan.toString(),_nominallengkap!, _judullengkap.toString());
                                             listData.add(data);
                                         } else {
                                             showDialog(
