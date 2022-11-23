@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/show.dart';
-
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/show.dart';
+import 'package:counter_7/page/myWatchList.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  Text _typeAngka = const Text('GENAP', style: TextStyle(color: Colors.red));
+  Text _typeAngka = const Text('GENAP', style: TextStyle(color: Color.fromARGB(255, 198, 89, 154)));
 
   void _incrementCounter() {
     setState(() {
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _typeCheck(int counter) {
     if (counter % 2 == 0) {
-      _typeAngka = const Text('GENAP', style: TextStyle(color: Colors.red));
+      _typeAngka = const Text('GENAP', style: TextStyle(color: Color.fromARGB(255, 179, 107, 195)));
     } else {
       _typeAngka = const Text('GANJIL', style: TextStyle(color: Colors.blue));
     }
@@ -95,6 +95,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyDataPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWatchListPage()),
                 );
               },
             ),
