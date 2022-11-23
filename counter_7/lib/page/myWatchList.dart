@@ -45,15 +45,6 @@ class _MyWatchListState extends State<MyWatchListPage> {
                 },
               ),
               ListTile(
-                title: const Text('My Watch List'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pop(
-                    context,
-                  );
-                },
-              ),
-              ListTile(
                title: const Text('Data Budget'),
                onTap: () {
                   // Route menu ke halaman form
