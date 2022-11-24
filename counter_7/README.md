@@ -3,12 +3,42 @@
  - NPM    : 2106653344
  - Kelas  : PBP - B
  
- ## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? 
- ## Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
- ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
- ## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
- ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+ ## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Pengambilan data JSON tanpa membuat model dapat dilakukan. Secara behavioral, JSON sendiri 
+merupakan suatu object dalam notasi Javascirpt di mana pada bahasa Dart, hal tersebut 
+ekuivalen dengan Map di mana object yang terdiri dari key dengan value pair. Namun, 
+pengambilan data JSON tanpa melakukan konversi ke dalam suatu model bukan merupakan 
+best practice dalam pengimplementasiannya. Konversi data JSON ke dalam suatu model 
+bertujuan untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui http 
+request yang akan ditampilkan pada sisi UI aplikasi.
 
+ ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Container, Center, Column, Row, Padding: Widget yang digunakan untuk mengatur posisi dari widget-widget lainnya
+- Text: Sebuah widget yang menampilkan dan memberikan styling pada text. Digunakan untuk menambilkan text ganjil/genap dan counter klik
+- SizedBox: Sebuah box dengan ukuran tertentu. Digunakan untuk memberikan spasi/padding di antara tombol
+- FutureBuilder: Widget yang membangun dirinya sendiri berdasarkan snapshot terakhir interaksinya dengan sebuah Future
+- CircularProgressIndicator: Widget berupa indikator lingkaran yang berputar. Digunakan untuk menandakan aplikasinya sedang bekerja (Dalam konteks ini menandakan data belum berhasil diambil)
+- Checkbox: Wiget berupa checkbox. Digunakan untuk menandakan dan mengubah status watched
+- Flexible: Sebuah widget yang mengendalikan bagaimana sebuah Row, Column, atau Flex flexes. Widget ini digunakan untuk membesarkan ukuran SizedBox sehingga memberikan spasi full antara 2 tombol increment dan decrement
+- ListView: sekumpulan widget yang bisa di-scroll dan disusun linear
+- TextButton: Suatu tombol yang bisa diberikan text
+- Drawer: Digunakan untuk memberikan akses ke berbagai tujuan dan fungsionalitas yang disajikan di aplikasi Anda
+
+ ## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Membuat sebuah function http request dengan method GET secara async untuk mengambil data 
+ke pihak eksternal Pada function tersebut lakukan parsing dengan jsonDecode() untuk mengubah 
+response String menjadi JSON Konversi object JSON ke dalam suatu Model object Gunakan widget 
+FutrueBuilder untuk menampilkan widget-widget dengan snapshot data terbaru yang telah 
+dikonversi menjadi sebuah object
+
+ ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat halaman baru bernama tambah_budget dan data_budget
+- Membuat custom Drawer widget dengan menerapkan seperation concern by refactoring untuk ditampilkan di tiap halaman
+- Set up navigasi halaman pada Drawer
+- Membuat global List yang terletak pada root widget untuk menyimpan object Budget
+- Implementasi halaman form dengan beberapa widget TextFormField (judul dan nominal), dan DropdownMenu (jenis)
+- Membuat Simpann button untuk menyimpan transaksi baru ke dalam global List
+- Menampilkan semua object Budget dengan custom Card widget dengan melakukan iterasi
 
   # Tugas 8 PBP
  - Nama   : Rizka Nisrina Nabila
